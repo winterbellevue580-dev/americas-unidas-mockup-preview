@@ -167,6 +167,10 @@ p.lede { font-size: 18px; line-height: 1.65; color: var(--ink-soft); max-width: 
 .visit-grid h3 { font-size: 21px; margin-bottom: 10px; }
 .visit-grid p { font-size: 16.5px; line-height: 1.6; color: var(--ink-soft); }
 .visit-grid a:not(.btn) { color: var(--red); }
+/* Belt for the rule above: pin the red button's label to white at higher specificity
+   (0-2-1), so "Call the Deli" can never regress to red-on-red even if the :not(.btn)
+   exclusion is lost or an older section rule resurfaces. */
+.visit-grid a.btn--red { color: #fff; }
 .hours { width: 100%; border-collapse: collapse; font-size: 16px; }
 .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
 .hours td:last-child { text-align: right; color: var(--ink); font-weight: 600; }
