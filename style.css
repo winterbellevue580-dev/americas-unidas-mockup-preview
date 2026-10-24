@@ -11,6 +11,10 @@
   --line: rgba(46, 33, 25, .16);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
+/* The hidden attribute must ALWAYS win. Author display rules (.dishes grid, img block)
+   outrank the UA stylesheet's [hidden] rule in the cascade, so without this guard
+   "hidden" panels and images still render. (Root cause of the Americas Unidas tab + modal bugs.) */
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 body { background: var(--cream); color: var(--ink); font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
 h1, h2, h3, .serif { font-family: Georgia, 'Times New Roman', serif; }
@@ -162,7 +166,7 @@ p.lede { font-size: 18px; line-height: 1.65; color: var(--ink-soft); max-width: 
 @media (max-width: 700px) { .visit-grid { grid-template-columns: 1fr; } }
 .visit-grid h3 { font-size: 21px; margin-bottom: 10px; }
 .visit-grid p { font-size: 16.5px; line-height: 1.6; color: var(--ink-soft); }
-.visit-grid a { color: var(--red); }
+.visit-grid a:not(.btn) { color: var(--red); }
 .hours { width: 100%; border-collapse: collapse; font-size: 16px; }
 .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
 .hours td:last-child { text-align: right; color: var(--ink); font-weight: 600; }

@@ -22,9 +22,11 @@
     <a href="#visit">Visit</a>
   </nav>
   <div class="top-actions">
-    <a class="ig-link" href="#" aria-label="Americas Unidas Deli on Instagram (placeholder in this concept)">
+    <!-- Instagram handle unverified: decorative glyph only, NOT a link (Lakou rule: no dead taps).
+         Becomes a real link only when the business's handle is confirmed. -->
+    <span class="ig-link" aria-hidden="true">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
-    </a>
+    </span>
     <button type="button" class="account-link" id="accountOpen">Account</button>
     <a class="btn btn--red" href="tel:+18454261771">Call to Order</a>
   </div>
@@ -281,16 +283,22 @@
 </script>
 
 <script>
-  // Menu category tabs (Inti pattern).
+  // Menu category tabs (Inti pattern): clicking a tab shows ONLY that category's panel.
+  // Panels hide via the hidden attribute — style.css carries a [hidden]{display:none!important}
+  // guard, because .dishes{display:grid} would otherwise outrank the UA [hidden] rule.
   (function () {
     var tabs = document.querySelectorAll('.tab[data-cat]');
     var panels = document.querySelectorAll('[data-panel]');
+    function activate(tab) {
+      tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== tab.getAttribute('data-cat'); });
+    }
     tabs.forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
-        panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== tab.getAttribute('data-cat'); });
-      });
+      tab.addEventListener('click', function () { activate(tab); });
     });
+    // Sync on load so the default view is coherent: the pre-selected tab's panel only.
+    var initial = document.querySelector('.tab[data-cat][aria-selected="true"]') || tabs[0];
+    if (initial) activate(initial);
   })();
 </script>
 
