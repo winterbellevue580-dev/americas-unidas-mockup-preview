@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Americas Unidas Deli — fresh homemade Latin food in Spring Valley, NY. Pupusas, desayunos, platos y más. (Concept mockup by Lakou Labs)" />
+<title>Americas Unidas Deli — Spring Valley, NY (Concept Mockup)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ TOP BAR (Inti pattern) ============ -->
+<header class="topbar">
+  <a class="wordmark" href="#hero" aria-label="Americas Unidas Deli — home">
+    <b>AMERICAS <span class="wm-red">UNIDAS</span></b>
+    <span>Deli · Spring Valley</span>
+  </a>
+  <nav class="topnav" aria-label="Main">
+    <a href="#story">Our Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="top-actions">
+    <a class="ig-link" href="#" aria-label="Americas Unidas Deli on Instagram (placeholder in this concept)">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+    </a>
+    <button type="button" class="account-link" id="accountOpen">Account</button>
+    <a class="btn btn--red" href="tel:+18454261771">Call to Order</a>
+  </div>
+</header>
+
+<!-- ============ HERO (cinematic entrance: video, poster, static fallback — plays once, holds) ============ -->
+<header class="hero" id="hero" aria-label="Americas Unidas Deli storefront, Spring Valley">
+  <div class="demo-tag">Concept Mockup</div>
+  <div class="hero__media">
+    <img class="hero__poster" id="heroPoster" src="assets/hero-poster.jpg" alt="The Americas Unidas Deli storefront on South Main Street, Spring Valley — its green Central America sign and OPEN neon in the window." />
+    <video id="heroVideo" class="hero__video" muted playsinline preload="auto" poster="assets/hero-poster.jpg" style="display:none"></video>
+    <div class="hero__shade" aria-hidden="true"></div>
+  </div>
+  <div class="hero__copy">
+    <div class="hero__kicker">Deli · Spring Valley, NY</div>
+    <h1 class="hero__title">Americas <em>Unidas</em></h1>
+    <p class="hero__sub"><span class="es">Sabor de casa, hecho fresco.</span> Fresh homemade food — pupusas, desayunos y platos from Central America, served with love on South Main Street.</p>
+    <div class="hero__cta">
+      <a class="btn btn--red" href="#menu">See the Menu</a>
+      <a class="btn btn--ghost" href="tel:+18454261771">Call to Order</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STORY ============ -->
+<section id="story">
+  <div class="num"><span class="num-es">Nuestra Historia</span> — Our Story</div>
+  <h2>Fresh, homemade, <em>como en casa.</em></h2>
+  <p class="lede">Americas Unidas is a family deli-restaurant on South Main Street in Spring Valley, passionate about serving our clients fresh homemade food. Our kitchen brings together the flavors of Guatemala and Central America — desayunos in the morning, pupusas hot off the comal, and plates that taste like Sunday at home.</p>
+  <div class="gallery" aria-label="From our kitchen">
+    <figure>
+      <img src="assets/tacos.jpg" alt="Three tacos topped with avocado, pico de gallo, and lime, served on foil." loading="lazy" />
+      <figcaption><b>Tacos de la casa</b>Fresh off the grill, with avocado and lime.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/camarones.jpg" alt="A plate of camarones — shrimp in a savory sauce — with rice, salad, and avocado." loading="lazy" />
+      <figcaption><b>Camarones</b>Shrimp in a rich house sauce, with rice and salad.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/desayuno-llevar.jpg" alt="A to-go breakfast of huevos con jamón with fried plantains, queso fresco, and avocado." loading="lazy" />
+      <figcaption><b>Desayuno para llevar</b>Huevos con jamón, plátanos fritos, queso y aguacate — to go.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ MENU (Inti tabs + Lakou clickable dish cards) ============ -->
+<section id="menu">
+  <div class="num"><span class="num-es">El Menú</span> — The Menu</div>
+  <h2>Hecho fresco, <em>todos los días.</em></h2>
+  <div class="tabs" role="tablist" aria-label="Menu categories">
+    <button type="button" class="tab" role="tab" id="tab-desayunos" aria-controls="panel-desayunos" aria-selected="true" data-cat="desayunos">Desayunos <span class="tab-en">/ Breakfast</span></button>
+    <button type="button" class="tab" role="tab" id="tab-pupusas" aria-controls="panel-pupusas" aria-selected="false" data-cat="pupusas">Pupusas</button>
+    <button type="button" class="tab" role="tab" id="tab-platos" aria-controls="panel-platos" aria-selected="false" data-cat="platos">Platos <span class="tab-en">/ Entrees</span></button>
+    <button type="button" class="tab" role="tab" id="tab-mariscos" aria-controls="panel-mariscos" aria-selected="false" data-cat="mariscos">Mariscos <span class="tab-en">/ Seafood</span></button>
+    <button type="button" class="tab" role="tab" id="tab-bebidas" aria-controls="panel-bebidas" aria-selected="false" data-cat="bebidas">Bebidas <span class="tab-en">/ Drinks</span></button>
+  </div>
+
+  <div class="dishes" id="panel-desayunos" role="tabpanel" aria-labelledby="tab-desayunos" data-panel="desayunos">
+    <button type="button" class="dish" data-dish="desayuno-carne">
+      <img class="dish__img" src="assets/desayuno-carne.jpg" alt="Desayuno con carne asada: scrambled eggs, fried plantains, grilled steak, queso fresco, crema, and beans." loading="lazy" />
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Desayuno con Carne Asada</span><span class="dish__dots"></span><span class="dish__price">$13.65</span></span>
+        <span class="dish__en">Breakfast Platter with Steak</span>
+        <span class="dish__desc">Grilled steak with scrambled eggs, fried plantains, queso fresco, crema, and beans.</span>
+        <span class="dish__tags"><span class="tag tag--casa">De la casa</span></span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="dishes" id="panel-pupusas" role="tabpanel" aria-labelledby="tab-pupusas" data-panel="pupusas" hidden>
+    <button type="button" class="dish" data-dish="pupusa-queso">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Pupusa de Queso Combo</span><span class="dish__dots"></span><span class="dish__price">$12.00</span></span>
+        <span class="dish__en">Cheese Pupusa Combo</span>
+        <span class="dish__desc">Three stuffed tortillas with mozzarella, curtido, and salsa.</span>
+        <span class="dish__tags"><span class="tag tag--fav">Favorito</span></span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+    <button type="button" class="dish" data-dish="pupusa-mixta">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Pupusas Mixta Combo</span><span class="dish__dots"></span><span class="dish__price">$12.00</span></span>
+        <span class="dish__en">Mixed Pupusa Combo</span>
+        <span class="dish__desc">Three mixed pupusas with curtido and salsa on the side.</span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="dishes" id="panel-platos" role="tabpanel" aria-labelledby="tab-platos" data-panel="platos" hidden>
+    <button type="button" class="dish" data-dish="pechuga-plancha">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Pechuga a la Plancha</span><span class="dish__dots"></span><span class="dish__price">$12.00</span></span>
+        <span class="dish__en">Grilled Chicken Breast</span>
+        <span class="dish__desc">Grilled chicken breast with rice, two sides, and warm tortillas.</span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+    <button type="button" class="dish" data-dish="pechuga-empanizada">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Pechuga Empanizada</span><span class="dish__dots"></span><span class="dish__price">$12.00</span></span>
+        <span class="dish__en">Breaded Chicken Breast</span>
+        <span class="dish__desc">Golden, crispy breaded chicken breast — made fresh to order.</span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+    <button type="button" class="dish" data-dish="churrasco">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Churrasco</span><span class="dish__dots"></span><span class="dish__price">$14.50</span></span>
+        <span class="dish__en">Skirt Steak</span>
+        <span class="dish__desc">Skirt steak with rice, black beans, fried plantains, fries, tortillas, chips, and guacamole.</span>
+        <span class="dish__tags"><span class="tag tag--casa">De la casa</span></span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+    <button type="button" class="dish" data-dish="fajitas-res">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Fajitas de Res</span><span class="dish__dots"></span><span class="dish__price">$12.49</span></span>
+        <span class="dish__en">Steak Fajitas</span>
+        <span class="dish__desc">Sizzling steak fajitas with peppers and onions.</span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="dishes" id="panel-mariscos" role="tabpanel" aria-labelledby="tab-mariscos" data-panel="mariscos" hidden>
+    <button type="button" class="dish" data-dish="sopa-mariscos">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Sopa de Mariscos</span><span class="dish__dots"></span><span class="dish__price">$15.00</span></span>
+        <span class="dish__en">Seafood Soup</span>
+        <span class="dish__desc">A hearty seafood soup, simmered fresh in the kitchen.</span>
+        <span class="dish__tags"><span class="tag tag--fav">Favorito</span></span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="dishes" id="panel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" data-panel="bebidas" hidden>
+    <button type="button" class="dish" data-dish="batido">
+      <span class="dish__body">
+        <span class="dish__row"><span class="dish__name">Batido de Fresa y Banana</span><span class="dish__dots"></span><span class="dish__price">~$5.25</span></span>
+        <span class="dish__en">Strawberry-Banana Smoothie</span>
+        <span class="dish__desc">Strawberry and banana blended smooth, topped with whipped cream. 20 oz.</span>
+        <span class="dish__hint">Tap for details</span>
+      </span>
+    </button>
+  </div>
+
+  <p class="menu-note">Full menu — including daily specials — available in store and through online ordering.</p>
+</section>
+
+<!-- ============ CATERING ============ -->
+<div class="catering" aria-label="Catering">
+  <img class="bg" src="assets/catering.jpg" alt="Catering trays of stewed meats and chicken, garnished with cilantro, ready for an event." loading="lazy" />
+  <div class="catering__shade" aria-hidden="true"></div>
+  <div class="catering__copy">
+    <div class="num" style="color:#f2c14e">Catering</div>
+    <h2>Bandejas para <em>tus eventos.</em></h2>
+    <p>Party trays of our homemade cooking for birthdays, gatherings, and events — call us and we'll put it together.</p>
+    <a class="btn btn--red" href="tel:+18454261771">Call for Catering</a>
+  </div>
+</div>
+
+<!-- ============ VISIT ============ -->
+<section id="visit">
+  <div class="num"><span class="num-es">Visítanos</span> — Visit</div>
+  <h2>Estamos en <em>South Main Street.</em></h2>
+  <div class="visit-grid">
+    <div>
+      <h3>Americas Unidas Deli</h3>
+      <p>2 S Main St, Unit 3<br />Spring Valley, NY 10977<br /><a href="tel:+18454261771">(845) 426-1771</a></p>
+      <p style="margin-top:14px">In a hurry? Order ahead for pickup through our online ordering — or call and we'll have it ready.</p>
+      <div class="visit-actions">
+        <a class="btn btn--red" href="tel:+18454261771">Call the Deli</a>
+        <a class="btn btn--outline" href="https://www.americasunidasdeli.com/" target="_blank" rel="noopener">Order Online</a>
+        <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=Americas+Unidas+Deli+2+S+Main+St+Unit+3+Spring+Valley+NY+10977" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+    <div>
+      <h3>Horario — Hours</h3>
+      <table class="hours">
+        <tr><td>Monday — Saturday</td><td>6:00 AM – 9:00 PM</td></tr>
+        <tr><td>Sunday</td><td>7:00 AM – 8:00 PM</td></tr>
+      </table>
+      <p style="margin-top:14px">Breakfast from opening, lunch and dinner all day. <em>¡Te esperamos!</em></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a class="wordmark" href="#hero" style="margin-right:0">
+    <b>AMERICAS <span class="wm-red">UNIDAS</span></b>
+    <span>Deli · Spring Valley</span>
+  </a>
+  <div style="margin-top:12px">2 S Main St, Unit 3, Spring Valley, NY 10977 · (845) 426-1771</div>
+  <div class="fineprint">Concept mockup prepared by Lakou Labs — not affiliated with Americas Unidas Deli</div>
+</footer>
+
+<!-- ============ DISH DETAIL MODAL (Lakou build standard: no dead taps) ============ -->
+<div class="modal" id="dishModal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="dishTitle">
+    <button type="button" class="modal__close" data-close aria-label="Close details">&times;</button>
+    <img class="modal__img" id="dishImg" alt="" hidden />
+    <div class="modal__content">
+      <h3 id="dishTitle"></h3>
+      <div class="modal__en" id="dishEn"></div>
+      <div class="modal__price" id="dishPrice"></div>
+      <p class="modal__desc" id="dishDesc"></p>
+      <div class="modal__actions">
+        <a class="btn btn--red" href="tel:+18454261771">Call to Order</a>
+        <a class="btn btn--outline" href="https://www.americasunidasdeli.com/" target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ACCOUNT MODAL (Square account, replicated as utility element) ============ -->
+<div class="modal" id="accountModal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+    <button type="button" class="modal__close" data-close aria-label="Close account info">&times;</button>
+    <div class="modal__content">
+      <h3 id="accountTitle">Your Account</h3>
+      <div class="modal__en">Tu cuenta — rewards &amp; quick reorder</div>
+      <p class="modal__desc" style="margin-top:14px">Accounts live with our online ordering. Create an account to access rewards and quick reordering, save your favorites, and check out faster next time — for pickup and shippable items alike.</p>
+      <div class="modal__actions">
+        <a class="btn btn--red" href="https://www.americasunidasdeli.com/" target="_blank" rel="noopener">Go to Online Ordering</a>
+      </div>
+      <p class="modal__note">Secure checkout by Square. You'll sign in or create your account on our ordering page.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Inti pattern: pick the right hero file for the screen, fall back to the poster if video can't play.
+  // Lakou standard: the entrance plays ONCE and holds its final frame — no loop attribute.
+  (function () {
+    var video = document.getElementById('heroVideo');
+    var poster = document.getElementById('heroPoster');
+    var file = window.matchMedia('(max-width: 700px)').matches ? 'assets/hero-mobile.mp4' : 'assets/hero-desktop.mp4';
+    var src = document.createElement('source');
+    src.src = file; src.type = 'video/mp4';
+    video.appendChild(src);
+    video.addEventListener('canplay', function () {
+      video.style.display = 'block';
+      poster.style.display = 'none';
+      video.play().catch(function () { /* static fallback stays */ });
+    });
+    video.addEventListener('error', function () { video.style.display = 'none'; }, true);
+    video.load();
+  })();
+</script>
+
+<script>
+  // Menu category tabs (Inti pattern).
+  (function () {
+    var tabs = document.querySelectorAll('.tab[data-cat]');
+    var panels = document.querySelectorAll('[data-panel]');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+        panels.forEach(function (p) { p.hidden = p.getAttribute('data-panel') !== tab.getAttribute('data-cat'); });
+      });
+    });
+  })();
+</script>
+
+<script>
+  // Clickable dish cards: every card opens its own detail view (Lakou build standard — no dead taps).
+  (function () {
+    var DISHES = {
+      'desayuno-carne': {
+        name: 'Desayuno con Carne Asada', en: 'Breakfast Platter with Steak', price: '$13.65',
+        img: 'assets/desayuno-carne.jpg',
+        alt: 'Desayuno con carne asada: scrambled eggs, fried plantains, grilled steak, queso fresco, crema, and beans.',
+        desc: 'The full Central American breakfast: carne asada fresh off the grill with fluffy scrambled eggs, sweet fried plantains, a wedge of queso fresco, crema, and beans with a rich, dark house sauce. The plate that starts the day right — como en casa.'
+      },
+      'pupusa-queso': {
+        name: 'Pupusa de Queso Combo', en: 'Cheese Pupusa Combo', price: '$12.00',
+        desc: 'Three hand-made corn tortillas stuffed with mozzarella and griddled until the cheese pulls, served the traditional way — with curtido, our pickled cabbage slaw, and salsa on the side.'
+      },
+      'pupusa-mixta': {
+        name: 'Pupusas Mixta Combo', en: 'Mixed Pupusa Combo', price: '$12.00',
+        desc: 'Three mixed pupusas — the revuelta-style combination of cheese, beans, and chicharrón in every bite — griddled to order and served with curtido and salsa.'
+      },
+      'pechuga-plancha': {
+        name: 'Pechuga a la Plancha', en: 'Grilled Chicken Breast', price: '$12.00',
+        desc: 'A chicken breast grilled on the plancha until juicy and golden, served with rice, your choice of two sides, and warm tortillas. Simple, fresh, and filling.'
+      },
+      'pechuga-empanizada': {
+        name: 'Pechuga Empanizada', en: 'Breaded Chicken Breast', price: '$12.00',
+        desc: 'Chicken breast in a golden, crispy breading, fried fresh to order. Crunchy outside, tender inside — a deli favorite.'
+      },
+      'churrasco': {
+        name: 'Churrasco', en: 'Skirt Steak', price: '$14.50',
+        desc: 'Our loaded skirt-steak plate: tender churrasco with rice, black beans, sweet fried plantains, fries, warm tortillas, chips, and guacamole. Come hungry — this one is the full spread.'
+      },
+      'fajitas-res': {
+        name: 'Fajitas de Res', en: 'Steak Fajitas', price: '$12.49',
+        desc: 'Strips of steak seared hot with peppers and onions until they sizzle — served fajita-style, ready to wrap and eat.'
+      },
+      'sopa-mariscos': {
+        name: 'Sopa de Mariscos', en: 'Seafood Soup', price: '$15.00',
+        desc: 'A hearty seafood soup simmered in our kitchen — rich, warming, and full of flavor from the sea. The bowl regulars swear by on a cold day.'
+      },
+      'batido': {
+        name: 'Batido de Fresa y Banana', en: 'Strawberry-Banana Smoothie', price: '~$5.25',
+        desc: 'Strawberry and banana blended thick and smooth, crowned with whipped cream. A 20 oz batido — sweet, cold, and made to order.'
+      }
+    };
+
+    var modal = document.getElementById('dishModal');
+    var img = document.getElementById('dishImg');
+    var title = document.getElementById('dishTitle');
+    var en = document.getElementById('dishEn');
+    var price = document.getElementById('dishPrice');
+    var desc = document.getElementById('dishDesc');
+    var accountModal = document.getElementById('accountModal');
+    var lastFocused = null;
+
+    function openModal(m, trigger) {
+      lastFocused = trigger || document.activeElement;
+      m.hidden = false;
+      document.body.classList.add('no-scroll');
+      var c = m.querySelector('.modal__close');
+      if (c) c.focus();
+    }
+    function closeModal(m) {
+      m.hidden = true;
+      document.body.classList.remove('no-scroll');
+      if (lastFocused) lastFocused.focus();
+    }
+
+    document.querySelectorAll('.dish[data-dish]').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var d = DISHES[card.getAttribute('data-dish')];
+        if (!d) return;
+        title.textContent = d.name;
+        en.textContent = d.en;
+        price.textContent = d.price;
+        desc.textContent = d.desc;
+        if (d.img) { img.src = d.img; img.alt = d.alt || ''; img.hidden = false; }
+        else { img.hidden = true; img.removeAttribute('src'); }
+        openModal(modal, card);
+      });
+    });
+
+    document.getElementById('accountOpen').addEventListener('click', function () {
+      openModal(accountModal, this);
+    });
+
+    [modal, accountModal].forEach(function (m) {
+      m.querySelectorAll('[data-close]').forEach(function (el) {
+        el.addEventListener('click', function () { closeModal(m); });
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        if (!modal.hidden) closeModal(modal);
+        if (!accountModal.hidden) closeModal(accountModal);
+      }
+    });
+  })();
+</script>
+</body>
+</html>
